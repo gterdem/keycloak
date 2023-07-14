@@ -14,6 +14,8 @@ public class AbpKeycloakModule : AbpModule
             {
                 options.Url = new Uri(configuration["Keycloak:url"]!);
                 options.RealmName = configuration["Keycloak:realmName"];
+                options.AdminUserName = configuration["Keycloak:adminUsername"];
+                options.AdminUserPassword = configuration["Keycloak:adminPassword"];
             }
         );
     }
