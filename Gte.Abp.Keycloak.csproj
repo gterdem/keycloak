@@ -9,7 +9,7 @@
         <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/gterdem/keycloak/</RepositoryUrl>
-        <PackageReadmeFile>NuGet.md</PackageReadmeFile>
+        <PackageReadmeFile>ReadMe.md</PackageReadmeFile>
         <PackageTags>aspnetcore abp framework keycloak module maui blazor mvc csharp webapp</PackageTags>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <!-- Include symbol files (*.pdb) in the built .nupkg -->
@@ -32,7 +32,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include=".\nuget\NuGet.md" Pack="true" PackagePath="\" />
+        <None Include="ReadMe.md" Pack="true" PackagePath="\" />
         <None Include=".\nuget\abp_maskot_nupkg.png" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
