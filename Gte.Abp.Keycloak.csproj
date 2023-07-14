@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <LangVersion>latest</LangVersion>
-        <Version>7.4.0</Version>
-        <NoWarn>$(NoWarn);CS1591;CS0436</NoWarn>
-        <PackageIconUrl>https://abp.io/assets/abp_nupkg.png</PackageIconUrl>
+        <PackageId>Gte.Abp.Keycloak</PackageId>        
+        <Version>1.0.0</Version>
+        <Authors>gterdem</Authors>        
+        <PackageIcon>abp_maskot_nupkg.png</PackageIcon>
         <PackageProjectUrl>https://abp.io/</PackageProjectUrl>
         <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
         <RepositoryType>git</RepositoryType>
@@ -14,19 +14,27 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <!-- Include symbol files (*.pdb) in the built .nupkg -->
         <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;netstandard2.1;net7.0</TargetFrameworks>
-        <Nullable>enable</Nullable>
-        <WarningsAsErrors>Nullable</WarningsAsErrors>
-        <PackageId>Gte.Abp.Keycloak</PackageId>
         <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
         <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
         <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
         <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <LangVersion>latest</LangVersion>
+        <TargetFramework>net7.0</TargetFramework>
+        <NoWarn>$(NoWarn);CS1591;CS0436</NoWarn>
+        <Nullable>enable</Nullable>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>        
         <RootNamespace />
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include=".\nuget\NuGet.md" Pack="true" PackagePath="\" />
+        <None Include=".\nuget\abp_maskot_nupkg.png" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Volo.Abp.Core" Version="7.0.0" />

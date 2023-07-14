@@ -9,7 +9,7 @@ public class AbpKeycloakClientOptions
     /// </summary>
     public Uri Url { get; set; }
     /// <summary>
-    /// The name of the realm that the keycloak client connects to.
+    /// The name of the realm that the keycloak client connects to. The default is "master".
     /// </summary>
     public string? RealmName { get; set; }
 
